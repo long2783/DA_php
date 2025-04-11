@@ -96,7 +96,7 @@ function getCategoryById($conn, $id){
    }
 }
 function get5Categoies($conn){
-   $sql = "SELECT * FROM category LIMIT 5";
+   $sql = "SELECT * FROM category LIMIT 10";
    $stmt = $conn->prepare($sql);
    $stmt->execute();
 
