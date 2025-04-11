@@ -1,0 +1,160 @@
+
+/* Neumorphism Style Base */
+body {
+	background: #e0e5ec;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #333;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Login page background */
+.login-page {
+	background: url("img/bg-login.jpg") no-repeat center center fixed;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Neumorphism + Glass effect */
+.login-form-container {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	padding: 40px;
+	border-radius: 20px;
+	box-shadow: 10px 10px 20px #babecc, -10px -10px 20px #ffffff;
+	width: 100%;
+	max-width: 500px;
+}
+
+/* Input fields */
+.login-form-container .form-control {
+	background: #e0e5ec;
+	border: none;
+	border-radius: 12px;
+	box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #ffffff;
+	padding: 10px 15px;
+}
+
+/* Button neumorphism */
+.btn-primary {
+	padding: 10px 20px;
+	background: #e0e5ec;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #ffffff;
+	color: #333;
+	font-weight: bold;
+	transition: 0.3s ease-in-out;
+}
+.btn-primary:hover {
+	box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #ffffff;
+	color: #127b8e;
+}
+
+/* Links */
+.link-secondary {
+	display: inline-block;
+	padding: 8px 16px;
+	margin: 5px 0;
+	background: #e0e5ec;
+	color: #333;
+	text-decoration: none;
+	border-radius: 12px;
+	box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #ffffff;
+	transition: 0.3s ease;
+}
+.link-secondary:hover {
+	box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #ffffff;
+	color: #127b8e;
+}
+
+/* Utility classes */
+.w-450 {
+	width: 450px;
+}
+
+.vh-100 {
+	min-height: 100vh;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+	.login-form-container {
+		width: 90%;
+	}
+}
+
+/*Category-admin*/
+.main-table {
+    margin-left: 250px; 
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.main-table h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.main-table .btn-success {
+    font-weight: bold;
+    padding: 6px 16px;
+}
+
+.table.t1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.table.t1 th,
+.table.t1 td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table.t1 th {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+
+.table.t1 td {
+    background-color: #fefefe;
+}
+
+.alert {
+    margin-top: 10px;
+}
+
+/* Buttons inside table */
+.table .btn {
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+}
+
+.btn-danger:hover,
+.btn-warning:hover {
+    opacity: 0.85;
+}
+
