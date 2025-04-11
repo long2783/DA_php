@@ -23,18 +23,71 @@ $user = getUserByID($conn, $user_id);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
-		.password-wrapper {
-			position: relative;
-		}
-		.password-wrapper i {
-			position: absolute;
-			top: 50%;
-			right: 10px;
-			transform: translateY(-50%);
-			cursor: pointer;
-			color: #666;
-		}
-	</style>
+    body {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .login-form-container {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .shadow {
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid #dee2e6;
+    }
+
+    h4 {
+        font-weight: 600;
+        color: #343a40;
+    }
+
+    .form-label {
+        font-weight: 500;
+    }
+
+    .form-control[disabled] {
+        background-color: #f1f3f5;
+        border: 1px solid #ced4da;
+        color: #495057;
+    }
+
+    .password-wrapper {
+        position: relative;
+    }
+
+    .password-wrapper i {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6c757d;
+    }
+
+    .btn {
+        min-width: 130px;
+        font-weight: 500;
+    }
+
+    .btn-warning {
+        color: #212529;
+    }
+
+    @media (max-width: 576px) {
+        .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .mt-4.text-center {
+            text-align: left !important;
+        }
+    }
+</style>
 </head>
 <body class="login-page">
 
