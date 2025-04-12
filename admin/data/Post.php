@@ -1,6 +1,6 @@
 <?php 
 
-
+// Get All 
 function getAll($conn){
    $sql = "SELECT * FROM post 
            WHERE publish=1 ORDER BY post_id DESC";
@@ -14,7 +14,7 @@ function getAll($conn){
    	 return 0;
    }
 }
-
+ // getAllDeep admin
 function getAllDeep($conn){
    $sql = "SELECT * FROM post";
    $stmt = $conn->prepare($sql);
@@ -27,7 +27,7 @@ function getAllDeep($conn){
        return 0;
    }
 }
-
+// getAllPostsByCategory
 function getAllPostsByCategory($conn, $category_id){
    $sql = "SELECT * FROM post  WHERE category=? AND publish=1";
    $stmt = $conn->prepare($sql);
@@ -40,7 +40,7 @@ function getAllPostsByCategory($conn, $category_id){
        return 0;
    }
 }
-
+// getById
 function getById($conn, $id){
    $sql = "SELECT * FROM post 
            WHERE post_id=? AND publish=1";
@@ -54,6 +54,7 @@ function getById($conn, $id){
        return 0;
    }
 }
+// getById Deep - Admin
 function getByIdDeep($conn, $id){
    $sql = "SELECT * FROM post WHERE post_id=?";
    $stmt = $conn->prepare($sql);
@@ -66,10 +67,8 @@ function getByIdDeep($conn, $id){
        return 0;
    }
 }
-function serach($conn, $key){
-   
-   $key = "%{$key}%";
 
+function serach($conn, $key){ 
    $sql = "SELECT * FROM post 
            WHERE publish=1 AND (post_title LIKE ? 
            OR post_text LIKE ?)";
@@ -83,6 +82,7 @@ function serach($conn, $key){
        return 0;
    }
 }
+
 function getCategoryById($conn, $id){
    $sql = "SELECT * FROM category WHERE id=?";
    $stmt = $conn->prepare($sql);
@@ -95,8 +95,9 @@ function getCategoryById($conn, $id){
        return 0;
    }
 }
+
 function get5Categoies($conn){
-   $sql = "SELECT * FROM category LIMIT 10";
+   $sql = "SELECT * FROM category LIMIT 20";
    $stmt = $conn->prepare($sql);
    $stmt->execute();
 
@@ -104,7 +105,7 @@ function get5Categoies($conn){
          $data = $stmt->fetchAll();
          return $data;
    }else {
-       return [];
+       return 0;
    }
 }
 
@@ -134,6 +135,7 @@ function getAllCategories($conn){
    }
 }
 
+// Delete By ID
 function deleteById($conn, $id){
    $sql = "DELETE FROM post WHERE post_id=?";
    $stmt = $conn->prepare($sql);
